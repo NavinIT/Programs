@@ -1,4 +1,5 @@
 import java.util.*;
+
 class Oddnumbers{
     public static void main(String args[]){
     Scanner scanner=new Scanner(System.in);
