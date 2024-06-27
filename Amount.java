@@ -3,7 +3,7 @@ import java.lang.*;
 import java.io.*;
 
 
-/*class Amount{
+class Amount{
 
 public static void main (String args[]){
 
@@ -25,10 +25,10 @@ System.out.print("The Price Value Is "+R1+" Rupees and "+P+" Paise only");
 
 }
 
-}*/
+}
 
 // Displaying different datatypes using scanner
-/*class Excersise{
+class Excersise{
     public static void main(String args[]){
         Scanner in=new Scanner(System.in);
         System.out.print("Enter a byte value: ");        
@@ -53,8 +53,7 @@ System.out.print("The Price Value Is "+R1+" Rupees and "+P+" Paise only");
         String St=in.nextLine();
         in.nextLine();        
         System.out.print( St);        
-    }
-}*/
+
 //getting input from user and display as pyramid structure (25.06.2024)
 class Excersise1{
     public static void main(String args[]){
