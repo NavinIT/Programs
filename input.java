@@ -19,6 +19,15 @@ class Task{
     void Display() {
         for(i=0;i<ID.length;i++) {
             System.out.println("Task ID : "+ID[i]+",Task Title : "+Title[i]+",Task Description : "+Description[i]+",Task Priority : "+Priority[i]+",Task Status : "Status[i]);
+            if(Priority[i]=="High"){
+                System.out.println("Task ID : "+ID[i]+",Task Title : "+Title[i]+",Task Description : "+Description[i]+",Task Priority : "+Priority[i]+",Task Status : "Status[i]);
+            }
+            else if(Priority[i]=="Low"){
+                System.out.println("Task ID : "+ID[i]+",Task Title : "+Title[i]+",Task Description : "+Description[i]+",Task Priority : "+Priority[i]+",Task Status : "Status[i]);
+            }
+            else (Priority[i]=="Medium"){
+                System.out.println("Task ID : "+ID[i]+",Task Title : "+Title[i]+",Task Description : "+Description[i]+",Task Priority : "+Priority[i]+",Task Status : "Status[i]);
+            }
         }
            }   
 }
@@ -91,8 +100,7 @@ static void Delete_Task(){
         Ds=null;
         Pr=null;
         St=null;
-
-    }
+}
     Task obj=new Task(ID,Tt,Ds,Pr,St);
     
 }
@@ -118,64 +126,52 @@ static void Exit(){
 class input{
 public static void main(String args[]) throws IOException {
 DataInputStream in=new DataInputStream(System.in);
-String User_Input;
-int count;
-String U_I;
+int User_Input,count,U_I;
 TaskManager Task_Manager=new TaskManager();
 while(true){
 System.out.print("Enter your choice (1-6) :");
-User_Input=in.readLine();
+User_Input=in.nextInt();
 
-U_I=if(User_Input==1 && User_Input<=6)?User_Input:"0";
-switch(User_input){
+U_I=if(User_Input==1 && User_Input<=6)?User_Input:0;
+switch(U_I){
     default:
         {
             System.out.print("Invalid Choice. Please enter a value between 1 to 6");
             break;
         }
-    case '1':
+    case 1:
         {
             count++;
             Task_manager.Add_Task(count);
-            break loop;
+            break ;
         }
-    case '2':
+    case 2:
         {
             Task_manager.Edit_Task();
-            break loop;
+            break;
         }
-    case '3':
+    case 3:
         {
             Task_manager.Delete_Task();
-            break loop;
+            break;
         }
-    case '4':
+    case 4:
         {
             Task_manager.View_All_Task();
-            break loop;
+            break;
         }
-    case '5':
+    case 5:
         {
             Task_manager.Filter_Task_By_Priority();
-            break loop;
+            break;
         }
-    case '6':
+    case 6:
         {
             Task_manager.Exit();
-            break loop;
+            break;
         }
 
 }
-//if(User_Input==1 && User_Input<=6){
-   // if(User_Input==1)
-     //   {
-       //     count++;
-        //    Task_Manager.Add_Task(count);
-        //}
-
-//}
-//else
-//System.out.print("")
 }
 }
 }
