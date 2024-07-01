@@ -1,5 +1,5 @@
 import java.util.*;
-//understanding of class, object and methods
+
 class Student{
     int roll;
     int marks[][]=new int[3][3];
@@ -31,7 +31,7 @@ public class Students{
             
             for(int i=0;i<1;i++){
                 for(int j=0;j<3;j++){
-                            System.out.print("Enter Student 1 marks:");
+                            System.out.print("Enter Student 1 mark "+(j+1)+":");
                             Stu.marks[i][j]=scanner.nextInt();
                             scanner.nextLine();
                 }
@@ -46,7 +46,7 @@ public class Students{
             
             for(int i=1;i<2;i++){
                 for(int j=0;j<3;j++){
-                            System.out.print("Enter Student 2 marks:");
+                            System.out.print("Enter Student 2 mark "+(j+1)+":");
                             Stu1.marks[i][j]=scanner.nextInt();
                             scanner.nextLine();
                 }
@@ -60,7 +60,7 @@ public class Students{
             scanner.nextLine();
             for(int i=2;i<3;i++){
                 for(int j=0;j<3;j++){
-                        System.out.print("Enter Student 3 marks:");
+                        System.out.print("Enter Student 3 mark "+(j+1)+":");
                         Stu2.marks[i][j]=scanner.nextInt();
                         scanner.nextLine();
                     }
@@ -68,10 +68,10 @@ public class Students{
             
 
         s=Stu.MarksTotal(0);
-        System.out.println("Student 1 Total Marks :"+s);       
+        System.out.println("Student 1 Total Marks : "+s);       
         s1=Stu1.MarksTotal(1);
-        System.out.println("Student 2 Total Marks :"+s1);       
+        System.out.println("Student 2 Total Marks : "+s1);       
         s2=Stu2.MarksTotal(2);
-        System.out.println("Student 3 Total Marks "+s2);       
+        System.out.println("Student 3 Total Marks : "+s2);       
     }
 }
